@@ -10,7 +10,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla-Weather-App</title>
   </head>
@@ -27,10 +27,10 @@
               <button class="btn btn-primary">Current</button>
             </form>
              <div class="general-location-info">
-            <h1 id="city-name">New York, NY</h1>
-            <ul>
+            <h1 id="city"></h1>
+                  <ul>
               <li id="dateTime">Tuesday 13:09</li>
-              <li>Partly Cloudy</li>
+              <li><span class="description" id="description"></span></li>
             </ul>
           </div>
 
@@ -39,12 +39,13 @@
             <div class="col-6">
               <div class="clearfix weather-temp">
                 <img
-                  src="C:\Users\16072\OneDrive\Desktop\clouds.jpg"
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
                   alt="clouds"
+                  id="icon"
                   class="float-left"
                 />
                 <span class="float-left temp">
-                  <strong>12</strong>
+                  <strong id="temp"></strong>
                   <span class="units">℃ |<a href="#"> ℉</a> </span>
               
 
@@ -54,9 +55,8 @@
 
             <div class="col-6">
               <ul>
-                <li>Precipitations: %</li>
-                <li>Humidity: %</li>
-                <li>Wind: km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind:<span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
