@@ -37,3 +37,6 @@ img {
 .description {
   text-transform: capitalize;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
