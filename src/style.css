@@ -48,3 +48,17 @@ li:first-letter {
 .searchBar {
   padding-bottom: 5px;
 }
+.weather-forecast {
+  margin-top: 10px;
+  text-align: center;
+}
+#forecast-icons {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+#days {
+  font-size: 15px;
+}
+#future-weather {
+  font-size: 12px;
+}
