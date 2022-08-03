@@ -44,6 +44,19 @@ function displayTemperature(response) {
   );
 }
 
+function searchLocation(position) {
+  let apiKey = "1b8da53efbc507799e8037efe6fb300e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function displayCurrentWeather(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+let currentButton = document.querySelector("#current-button");
+currentButton.addEventListener("click", displayCurrentWeather);
+
 function search(city) {
   let apiKey = "1b8da53efbc507799e8037efe6fb300e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
