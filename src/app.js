@@ -21,6 +21,34 @@ function formatDate(timestamp) {
   return ` ${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `    <div class="col-sm-2">
+      <div class="day">
+                ${day}
+                </div>
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                 width="30px"
+                 id="forecast-icons"
+                />
+                <div class="temps">
+              <span class="future-weather" id="future-weather">
+                <span>30° </span><span>22°</span> 
+              </span>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayTemperature(response) {
   celsiusTemp = response.data.main.temp;
   let temp = document.querySelector("#temp");
@@ -83,6 +111,7 @@ function showCelsius(event) {
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round(celsius);
 }
+displayForecast();
 
 let celsiusTemp = null;
 
