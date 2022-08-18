@@ -69,3 +69,9 @@ li:first-letter {
 #future-weather {
   font-size: 12px;
 }
+#current-button {
+  background-color: blue;
+}
+#search-button {
+  background-color: blue;
+}
