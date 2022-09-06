@@ -10,7 +10,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Emily's-Weather-App</title>
   </head>
@@ -19,31 +19,41 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-         
-
-            <form id="search">
-              <div class="row">
-                <div class="col-7 searchBar">
-              <input type="search" class="form-control rounded" placeholder="search for a city..." id="city-input" autocomplete="off">
+          <form id="search">
+            <div class="row">
+              <div class="col-7 searchBar">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="search for a city..."
+                  id="city-input"
+                  autocomplete="off"
+                />
               </div>
               <div class="col-2">
-              <input type="submit" value="Search" class="btn btn-primary" id="search-button"/>
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary"
+                  id="search-button"
+                />
               </div>
               <div class="col-2">
-              <button class="btn btn-success" id="current-button">Current</button>
+                <button class="btn btn-success" id="current-button">
+                  Current
+                </button>
               </div>
-              </div>
-            </form>
-             <div class="general-location-info">
+            </div>
+          </form>
+          <div class="general-location-info">
             <h1 id="city"></h1>
-                  <ul>
+            <ul>
               <li>Last Updated:<span id="date-time">h</span></li>
               <li><span class="description" id="description"></span></li>
             </ul>
           </div>
 
           <div class="row">
-
             <div class="col-6">
               <div class="clearfix weather-temp">
                 <img
@@ -54,26 +64,22 @@
                 />
                 <span class="float-left temp">
                   <strong id="temp"></strong>
-                  <span class="units"><a href="#" id="celsius" class="active">℃ </a> 
-                      |
-                    <a href="#" id="farenheit"> ℉</a> </span>
-                  </div>
-                </div>
+
+                  <span class="units" id="farenheit"> ℉ </span>
+                </span>
+              </div>
+            </div>
 
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Wind: <span id="wind"></span> mph</li>
               </ul>
             </div>
           </div>
 
           <div class="weather-forecast" id="forecast">
-
-           
-            <div class="row" id="days">
-              
-          </div>
+            <div class="row" id="days"></div>
           </div>
         </div>
 
